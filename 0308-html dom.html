@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="0308.css">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+    <h3>html dom的介紹</h3>
+    <div id="content">htmldom就是widows物件</div>
+    <input type="text" id=text value="Hello">
+    <button onclick="check();">Check</button>
+    </div>
+
+    <div id="result">123</div>
+    <button onclick="change();">Change</button>
+    
+
+    <div>
+            <img id=pic1 onclick="changepic();" src="images.png" alt="pig">
+        </div>
+
+
+    <script>
+
+
+    function check(){
+        //取得想要操作的標籤
+        let element=document.querySelector("#text")
+
+        //把使用者打的字後面加上 world 顯示在網頁的另一個標籤裡
+        console.log(element.value);
+        let words=element.value + "world";
+        let result=document.querySelector("#result");
+        result.innerHTML=words;
+
+    }
+//點擊後改變文字
+    function change() {
+        let element = document.querySelector("#content");
+        element.innerHTML="改變後的內容"
+    }
+
+
+//點擊後改變圖片
+    function changepic() {
+        let img = document.querySelector("#pic1");
+        img.src="54371115.jpg"
+        img.style.width="200px"
+
+    }
+    
+    
+
+    
+    </script>
+</body>
+</html>
